@@ -1,0 +1,21 @@
+<div class="simulator-card" style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-radius:16px; backdrop-filter:blur(10px); box-shadow:0 4px 20px rgba(0,0,0,0.35);">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@600;700&display=swap');
+  </style>
+  <div style="font-family:'Space Grotesk',sans-serif; font-size:1.0rem; font-weight:600; color:#F8FAFC; margin-bottom:12px; display:flex; align-items:center; gap:8px; letter-spacing:-0.01em;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+      <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+    </svg>
+    Multi-Model Live Comparison
+  </div>
+  __ROWS__
+</div>
+<script>
+  const fills = document.querySelectorAll('.sim-bar-fill');
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      fills.forEach(el => { el.style.width = el.dataset.target + '%'; });
+    }, 80);
+  });
+</script>

@@ -1,0 +1,18 @@
+<div style="padding:10px 6px; background:transparent;">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=IBM+Plex+Mono:wght@600&family=Inter:wght@400;500&display=swap');
+  </style>
+  <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#93A2B3; margin-bottom:8px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.08em; padding:0 82px 0 192px;">
+    <span style="color:__LOW_COLOR__;">◀ decreases risk</span>
+    <span style="color:__HIGH_COLOR__;">increases risk ▶</span>
+  </div>
+  __ROWS__
+</div>
+<script>
+  const fills = document.querySelectorAll('.bar-fill');
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      fills.forEach(el => { el.style.width = el.dataset.target + '%'; });
+    }, 50);
+  });
+</script>
